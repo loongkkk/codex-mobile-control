@@ -32,7 +32,7 @@ class ThreadListDisplaySupportTest {
                 thread(
                     id = "hook",
                     title = "研究 WeChat-Hook 项目",
-                    cwd = "D:\\codex\\weixin_bot",
+                    cwd = "D:\\codex\\chat_agent",
                     updatedAt = "2026-04-22T10:00:00Z"
                 )
             )
@@ -44,7 +44,7 @@ class ThreadListDisplaySupportTest {
                 "project:codex-mobile-control:projects",
                 "thread:Codex 安卓 App 2.0:child",
                 "thread:Codex 安卓 App 1.0:child",
-                "project:weixin_bot:codex",
+                "project:chat-agent:codex",
                 "thread:研究 WeChat-Hook 项目:child",
                 "section:对话",
                 "thread:模拟:chat"

@@ -12,7 +12,7 @@ describe("public repo sync script", () => {
   it("defaults to a stable sibling public repository directory", async () => {
     const script = await import(pathToFileURL(syncScript).href);
 
-    expect(script.defaultPublicRepoDir(path.join("D:", "code", "codex_app"))).toBe(
+    expect(script.defaultPublicRepoDir(path.join("D:", "code", "private_workspace"))).toBe(
       path.join("D:", "code", "codex-mobile-control")
     );
   });

@@ -656,7 +656,7 @@ describe("MobileGatewayRuntimeService", () => {
         {
           threadId: "thread-1",
           title: "Chrome",
-          cwd: "\\\\?\\D:\\code\\chrome_bot",
+          cwd: "\\\\?\\D:\\code\\browser_agent",
           updatedAt: 1778549544,
           archived: false,
           firstUserMessage: "继续八小时任务",
@@ -722,7 +722,7 @@ describe("MobileGatewayRuntimeService", () => {
         {
           threadId: "thread-1",
           title: "Chrome",
-          cwd: "D:\\code\\chrome_bot",
+          cwd: "D:\\code\\browser_agent",
           updatedAt: 1778549544,
           archived: false,
           firstUserMessage: "继续八小时任务",
@@ -753,7 +753,7 @@ describe("MobileGatewayRuntimeService", () => {
           scheduleSummary: "每15分钟",
           targetThreadId: "thread-1",
           targetThreadTitle: "Chrome",
-          cwd: "D:\\code\\chrome_bot"
+          cwd: "D:\\code\\browser_agent"
         },
         {
           id: "paused-research",
@@ -820,7 +820,7 @@ describe("MobileGatewayRuntimeService", () => {
         {
           threadId: "boss-thread",
           title: "分析一下这个项目功能和代码",
-          cwd: "\\\\?\\D:\\codex\\phone_zhipin",
+          cwd: "\\\\?\\D:\\codex\\recruiting_agent",
           updatedAt: 1778205562,
           archived: false,
           firstUserMessage: "分析一下这个项目功能和代码"
@@ -967,8 +967,8 @@ describe("MobileGatewayRuntimeService", () => {
       stateRepository: createStateRepositoryStub([
         {
           threadId: "thread-1",
-          title: "Ubuntu WeChat-Hook",
-          cwd: "\\\\?\\D:\\codex\\weixin_bot",
+          title: "Linux Chat-Hook",
+          cwd: "\\\\?\\D:\\codex\\chat_agent",
           updatedAt: 1778229750,
           archived: false,
           firstUserMessage: "上一轮已经完成",
@@ -984,7 +984,7 @@ describe("MobileGatewayRuntimeService", () => {
 
       expect(detail.thread).toMatchObject({
         threadId: "thread-1",
-        title: "Ubuntu WeChat-Hook",
+        title: "Linux Chat-Hook",
         status: "running",
         progressSummary: "开始处理新的输入",
         runningStartedAt: "2026-05-08T08:45:32.000Z",
@@ -1059,7 +1059,7 @@ describe("MobileGatewayRuntimeService", () => {
         {
           threadId: "thread-1",
           title: "分析 go_pay 闪退原因",
-          cwd: "\\\\?\\D:\\code\\go_pay_bot",
+          cwd: "\\\\?\\D:\\code\\payments_agent",
           updatedAt: 1778670137,
           archived: false,
           firstUserMessage: "帮我分析 GoPay 闪退",
@@ -1123,7 +1123,7 @@ describe("MobileGatewayRuntimeService", () => {
         `${JSON.stringify({
           timestamp: "2026-05-13T11:29:21.000Z",
           type: "turn_context",
-          payload: { turn_id: "turn-running", cwd: "D:\\code\\go_pay_bot" }
+          payload: { turn_id: "turn-running", cwd: "D:\\code\\payments_agent" }
         })}\n`
       ].join(""),
       "utf8"
@@ -1138,7 +1138,7 @@ describe("MobileGatewayRuntimeService", () => {
         {
           threadId: "thread-1",
           title: "分析 go_pay 闪退原因",
-          cwd: "\\\\?\\D:\\code\\go_pay_bot",
+          cwd: "\\\\?\\D:\\code\\payments_agent",
           updatedAt: 1778673728,
           archived: false,
           firstUserMessage: "帮我分析 GoPay 闪退",
@@ -1196,7 +1196,7 @@ describe("MobileGatewayRuntimeService", () => {
       ...baseThread,
       id: "thread-boss",
       preview: "可以，把这七点写成计划依次执行",
-      cwd: "D:\\code\\job_delivery_analysis",
+      cwd: "D:\\code\\job_analysis",
       updatedAt: 1778400463,
       turns: [
         {
@@ -1220,7 +1220,7 @@ describe("MobileGatewayRuntimeService", () => {
         {
           threadId: "thread-boss",
           title: "BOSS直聘HOOK 3.0",
-          cwd: "\\\\?\\D:\\code\\job_delivery_analysis",
+          cwd: "\\\\?\\D:\\code\\job_analysis",
           updatedAt: 1778400463,
           archived: false,
           firstUserMessage: "可以，把这七点写成计划依次执行",
@@ -1310,7 +1310,7 @@ describe("MobileGatewayRuntimeService", () => {
       ...baseThread,
       id: "thread-boss",
       preview: "可以，把这七点写成计划依次执行",
-      cwd: "D:\\code\\job_delivery_analysis",
+      cwd: "D:\\code\\job_analysis",
       updatedAt: 1778400463,
       turns: [
         {
@@ -1334,7 +1334,7 @@ describe("MobileGatewayRuntimeService", () => {
         {
           threadId: "thread-boss",
           title: "BOSS直聘HOOK 3.0",
-          cwd: "\\\\?\\D:\\code\\job_delivery_analysis",
+          cwd: "\\\\?\\D:\\code\\job_analysis",
           updatedAt: 1778400463,
           archived: false,
           firstUserMessage: "可以，把这七点写成计划依次执行",
@@ -3541,7 +3541,7 @@ describe("MobileGatewayRuntimeService", () => {
         {
           threadId: "thread-1",
           title: "BOSS直聘安卓HOOK",
-          cwd: "\\\\?\\D:\\codex\\phone_zhipin",
+          cwd: "\\\\?\\D:\\codex\\recruiting_agent",
           updatedAt: terminalTimestamp,
           archived: false,
           firstUserMessage: "模板为什么会丢"
@@ -6125,7 +6125,7 @@ describe("MobileGatewayRuntimeService", () => {
       persistUploadedFile: vi.fn(async () => ({
         threadId: "thread-1",
         fileName: "diagnostics.zip",
-        absolutePath: "D:\\codex_app\\gateway\\mobile-uploads\\thread-1\\diagnostics.zip",
+        absolutePath: "D:\\private_workspace\\gateway\\mobile-uploads\\thread-1\\diagnostics.zip",
         mimeType: "application/zip"
       })),
       resolveStoredFile: vi.fn(),
@@ -6159,11 +6159,11 @@ describe("MobileGatewayRuntimeService", () => {
       {
         type: "mention",
         name: "diagnostics.zip",
-        path: "D:\\codex_app\\gateway\\mobile-uploads\\thread-1\\diagnostics.zip"
+        path: "D:\\private_workspace\\gateway\\mobile-uploads\\thread-1\\diagnostics.zip"
       },
       {
         type: "text",
-        text: "手机端上传文件：\n- diagnostics.zip\n  D:\\codex_app\\gateway\\mobile-uploads\\thread-1\\diagnostics.zip",
+        text: "手机端上传文件：\n- diagnostics.zip\n  D:\\private_workspace\\gateway\\mobile-uploads\\thread-1\\diagnostics.zip",
         text_elements: []
       }
     ]);

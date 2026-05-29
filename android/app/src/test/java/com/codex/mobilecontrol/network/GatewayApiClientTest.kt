@@ -1021,7 +1021,7 @@ class GatewayApiClientTest {
                 {
                   "threadId":"thread-scheduled",
                   "title":"Chrome",
-                  "cwd":"D:/code/chrome_bot",
+                  "cwd":"D:/projects/browser_agent",
                   "status":"completed",
                   "updatedAt":"2026-05-12T01:32:24Z",
                   "progressSummary":"定时任务已开启 · 每15分钟",
@@ -1055,7 +1055,7 @@ class GatewayApiClientTest {
                           "scheduleSummary":"每5分钟",
                           "targetThreadId":"thread-1",
                           "targetThreadTitle":"Chrome",
-                          "cwd":"D:/code/chrome_bot"
+                          "cwd":"D:/projects/browser_agent"
                         }
                       ]
                     }

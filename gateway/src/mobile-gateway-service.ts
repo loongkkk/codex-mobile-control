@@ -611,10 +611,13 @@ function formatFileChangePath(filePath: string, cwd: string | null | undefined):
     return normalizedPath.slice(lowerCwd.length + 1);
   }
 
-  const projectMarker = "/codex_app/";
-  const projectIndex = lowerPath.lastIndexOf(projectMarker);
-  if (projectIndex >= 0) {
-    return normalizedPath.slice(projectIndex + projectMarker.length);
+  const sourceTreeMarkers = ["/gateway/", "/android/", "/mobile/", "/shared/", "/scripts/", "/docs/"];
+  const sourceTreeIndex = sourceTreeMarkers
+    .map((marker) => lowerPath.lastIndexOf(marker))
+    .filter((index) => index >= 0)
+    .sort((left, right) => left - right)[0];
+  if (sourceTreeIndex !== undefined) {
+    return normalizedPath.slice(sourceTreeIndex + 1);
   }
 
   return normalizedPath.replace(/^[A-Za-z]:\//, "");

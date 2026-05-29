@@ -383,7 +383,7 @@ describe("createGatewayApp", () => {
         scheduleSummary: "每5分钟",
         targetThreadId: "thread-1",
         targetThreadTitle: "Chrome",
-        cwd: "D:\\code\\chrome_bot"
+        cwd: "D:\\code\\browser_agent"
       }
     ]);
     const app = createGatewayApp({
@@ -406,7 +406,7 @@ describe("createGatewayApp", () => {
           scheduleSummary: "每5分钟",
           targetThreadId: "thread-1",
           targetThreadTitle: "Chrome",
-          cwd: "D:\\code\\chrome_bot"
+          cwd: "D:\\code\\browser_agent"
         }
       ]
     });

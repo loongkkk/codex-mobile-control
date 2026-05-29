@@ -27,9 +27,9 @@ class MarkdownPreviewSupportTest {
     @Test
     fun `preview path strips editor line suffix from local document links`() {
         assertEquals(
-            "D:/codex/phone_zhipin/docs/superpowers/specs/2026-05-08-boss-production-scheduler-design.md",
+            "D:/projects/recruiting_agent/docs/superpowers/specs/2026-05-08-boss-production-scheduler-design.md",
             MarkdownPreviewSupport.previewPathFor(
-                "D:/codex/phone_zhipin/docs/superpowers/specs/2026-05-08-boss-production-scheduler-design.md:1",
+                "D:/projects/recruiting_agent/docs/superpowers/specs/2026-05-08-boss-production-scheduler-design.md:1",
                 "生产调度器设计 (line 1)"
             )
         )

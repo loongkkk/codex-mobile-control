@@ -151,7 +151,7 @@ describe("mobile release script", () => {
     expect(result.status).not.toBe(0);
     expect(`${result.stdout}\n${result.stderr}`).toContain("Missing release configuration");
     expect(`${result.stdout}\n${result.stderr}`).not.toContain("Ubuntu" + "_22_04");
-    expect(`${result.stdout}\n${result.stderr}`).not.toContain("/home/" + "loong" + "kkk");
+    expect(`${result.stdout}\n${result.stderr}`).not.toContain("/home/" + "example" + "user");
   });
 
   it("validates gateway diagnostics runtime identity and release apk hash", async () => {
