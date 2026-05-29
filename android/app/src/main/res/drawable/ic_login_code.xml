@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@color/login_glow_line"
+        android:pathData="M10,7L4,12L10,17L12,15L8,12L12,9Z" />
+    <path
+        android:fillColor="@color/login_glow_line"
+        android:pathData="M14,7L12,9L16,12L12,15L14,17L20,12Z" />
+    <path
+        android:fillColor="@color/login_glow_line"
+        android:pathData="M13.3,4H15.4L10.7,20H8.6Z" />
+</vector>

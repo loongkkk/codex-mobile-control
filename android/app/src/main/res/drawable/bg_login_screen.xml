@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:endColor="@color/login_screen_bottom"
+                android:startColor="@color/login_screen_top" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:centerX="0.5"
+                android:centerY="0.34"
+                android:endColor="@color/login_screen_glow_outer"
+                android:gradientRadius="420dp"
+                android:startColor="@color/login_screen_glow_inner"
+                android:type="radial" />
+        </shape>
+    </item>
+</layer-list>

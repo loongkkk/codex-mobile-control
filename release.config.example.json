@@ -1,0 +1,14 @@
+{
+  "android": {
+    "localDir": "android",
+    "remoteHost": "android-builder",
+    "remoteDir": "/tmp/codex-mobile/android",
+    "gradle": "/opt/gradle/bin/gradle",
+    "androidSdk": "/opt/android-sdk"
+  },
+  "gateway": {
+    "url": "http://127.0.0.1:43124",
+    "apkDir": "gateway/downloads",
+    "restartCommand": ""
+  }
+}

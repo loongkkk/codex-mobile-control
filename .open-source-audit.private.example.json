@@ -1,0 +1,19 @@
+{
+  "patterns": [
+    {
+      "name": "private domain example",
+      "pattern": "replace-with-your-private-domain",
+      "flags": "iu"
+    },
+    {
+      "name": "private workspace example",
+      "pattern": "D:[\\\\/]+path[\\\\/]+to[\\\\/]+private-workspace",
+      "flags": "iu"
+    },
+    {
+      "name": "private device id example",
+      "pattern": "replace-with-your-device-id",
+      "flags": "iu"
+    }
+  ]
+}

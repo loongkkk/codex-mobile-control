@@ -1,0 +1,19 @@
+{
+  "name": "codex-mobile-control",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "gateway",
+    "mobile"
+  ],
+  "scripts": {
+    "audit:opensource": "node scripts/audit-open-source.mjs",
+    "build": "npm run build --workspaces --if-present",
+    "release:android": "node scripts/mobile-release.mjs --release",
+    "release:bump": "node scripts/mobile-release.mjs --bump",
+    "release:check": "node scripts/mobile-release.mjs --check",
+    "release:dry-run": "node scripts/mobile-release.mjs --release --dry-run",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "auth": {
+    "token": "replace-with-a-random-token"
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 43124,
+    "publicBaseUrl": "http://<your-computer-ip>:43124"
+  },
+  "storage": {
+    "uploadsDir": "mobile-uploads",
+    "queueFile": "queued-messages.json",
+    "downloadsDir": "downloads",
+    "mobileDistDir": "../mobile/dist"
+  },
+  "codex": {
+    "home": "",
+    "sendMode": "official_persistence",
+    "appServer": {
+      "transport": "stdio",
+      "command": "",
+      "wsUrl": ""
+    },
+    "ipcSend": true
+  },
+  "desktopBridge": {
+    "pythonCommand": "py",
+    "pywinautoPath": ""
+  }
+}

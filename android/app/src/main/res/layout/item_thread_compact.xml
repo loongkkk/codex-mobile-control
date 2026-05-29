@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/threadCompactRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_thread_selected"
+    android:gravity="center_vertical"
+    android:minHeight="38dp"
+    android:orientation="horizontal"
+    android:paddingStart="9dp"
+    android:paddingTop="7dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="7dp">
+
+    <FrameLayout
+        android:id="@+id/threadStatusDotSlot"
+        android:layout_width="19dp"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/threadStatusDot"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:layout_gravity="center_vertical|start"
+            android:background="@drawable/bg_thread_status_dot"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/threadCompactTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/threadPinIcon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="2dp"
+        android:contentDescription="@string/thread_list_pinned"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_app_pin"
+        app:tint="@color/text_secondary" />
+
+    <TextView
+        android:id="@+id/threadCompactTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp" />
+</LinearLayout>
