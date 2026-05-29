@@ -13,6 +13,7 @@
     "release:bump": "node scripts/mobile-release.mjs --bump",
     "release:check": "node scripts/mobile-release.mjs --check",
     "release:dry-run": "node scripts/mobile-release.mjs --release --dry-run",
+    "sync:public": "node scripts/sync-public-repo.mjs",
     "test": "npm run test --workspaces --if-present",
     "typecheck": "npm run typecheck --workspaces --if-present"
   }

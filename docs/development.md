@@ -89,3 +89,34 @@ tmp/
 ```
 
 Keep operational handoff notes and private deployment settings outside the public repository.
+
+## Public Repository Sync / 公开仓库同步
+
+Maintainers should keep private development history separate from the public GitHub repository. Do not repoint the private repository remote and push its existing history. Instead, keep a stable sibling public worktree such as `../codex-mobile-control` and sync the current clean file tree into it.
+
+维护者应保持私有开发历史和公开 GitHub 仓库分离。不要把私有仓库 remote 改到 GitHub 后直接推送历史。推荐保留一个固定的兄弟目录，例如 `../codex-mobile-control`，每次把当前干净文件树同步过去。
+
+Recommended workflow:
+
+```bash
+# private development repo
+npm run audit:opensource
+npm run typecheck
+npm test
+npm run sync:public
+
+# public GitHub repo
+cd ../codex-mobile-control
+git status --short
+npm run audit:opensource
+npm run typecheck
+npm test
+npm run release:check
+git add .
+git commit -m "chore: sync open source release"
+git push
+```
+
+`npm run sync:public` exports `HEAD` with LF line endings and replaces the public worktree while preserving the public repository's `.git` directory and local `node_modules`. It refuses to run when the public worktree already has uncommitted changes unless `-- --allow-dirty-public` is passed.
+
+`npm run sync:public` 会以 LF 换行导出当前 `HEAD`，替换公开仓库工作区，同时保留公开仓库自己的 `.git` 目录和本地 `node_modules`。如果公开仓库已有未提交改动，脚本会拒绝覆盖；确认要覆盖时再追加 `-- --allow-dirty-public`。
